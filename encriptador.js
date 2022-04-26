@@ -1,8 +1,11 @@
 //metodo loop
+var botonEncriptador = document.querySelector("#btn-encriptar");
+botonEncriptador.addEventListener("click", function(evento){
+    evento.preventDefault();
 
-let texto = "leandro juega a la pelota con amigos"
-let textoArray = texto.split("");
-var letras = [];
+    let texto = document.querySelector("#input-texto").value;
+    let textoArray = texto.split("");
+    var letras = [];
 
 for(var i = 0; i < textoArray.length; i++){
 
@@ -21,8 +24,11 @@ for(var i = 0; i < textoArray.length; i++){
     }
     var encriptado = letras.join("");
 }
+    let vacio = ""
+document.querySelector("#msg").value = encriptado;
+document.querySelector("#input-texto").value = vacio;
+})
 
-console.log(encriptado)
 
 /* Reglas de encriptación: 
 "e" es convertido para "enter" 
