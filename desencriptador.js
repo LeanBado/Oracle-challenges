@@ -4,11 +4,15 @@ var botonDesencriptador = document.querySelector("#btn-desencriptar");
 botonDesencriptador.addEventListener("click", function(evento){
     evento.preventDefault();
 
-    var encriptado = document.querySelector("#input-texto").value;
+    var encriptado = document.querySelector(".text-input").value.toLowerCase();
     var textoDesencriptado = encriptado.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u")
-    document.querySelector("#msg").value = textoDesencriptado;
+    document.querySelector("#texto2").value = textoDesencriptado;
     let vacio = ""
-    document.querySelector("#input-texto").value = vacio;
+    document.querySelector(".text-input").value = vacio;
+    document.querySelector("#imgDer").style.display = "none";
+    document.querySelector("#texto").style.display = "none";
+    document.querySelector("#copiar").style.display = "show";
+    document.querySelector("#copiar").style.display = "inherit";
 })
 
 

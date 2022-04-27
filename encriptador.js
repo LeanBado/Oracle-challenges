@@ -3,7 +3,7 @@ var botonEncriptador = document.querySelector("#btn-encriptar");
 botonEncriptador.addEventListener("click", function(evento){
     evento.preventDefault();
 
-    let texto = document.querySelector("#input-texto").value;
+    let texto = document.querySelector(".text-input").value.toLowerCase();
     let textoArray = texto.split("");
     var letras = [];
 
@@ -25,8 +25,13 @@ for(var i = 0; i < textoArray.length; i++){
     var encriptado = letras.join("");
 }
     let vacio = ""
-document.querySelector("#msg").value = encriptado;
-document.querySelector("#input-texto").value = vacio;
+
+document.querySelector("#texto2").value = encriptado;
+document.querySelector(".text-input").value = vacio;
+document.querySelector("#imgDer").style.display = "none";
+document.querySelector("#texto").style.display = "none";
+document.querySelector("#copiar").style.display = "show";
+document.querySelector("#copiar").style.display = "inherit";
 })
 
 
